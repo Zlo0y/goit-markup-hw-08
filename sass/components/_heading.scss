@@ -1,0 +1,51 @@
+.hero__heading {
+  @include font($fw: 900, $fz: 44px, $lh: 1.36, $ls: 0.06em);
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: $primary-color;
+  width: 696px;
+  min-height: 120px;
+  margin: 0px auto 30px auto;
+}
+
+.features-list__heading {
+  @include font($fw: bold);
+  font-style: normal;
+  text-transform: uppercase;
+  color: $second-studio-color;
+  margin-bottom: 10px;
+  height: 16px;
+}
+
+.our-worcks-list__heading {
+  @include font($fw: bold);
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+.team__main-heading,
+.clients__main-heading,
+.our-worcks__main-heading {
+  @include font($fw: bold, $fz: 36px, $lh: 1.16);
+  font-style: normal;
+  text-align: center;
+  color: $second-studio-color;
+  margin-bottom: 50px;
+}
+
+.team-list__heading {
+  @include font($fw: 500, $fz: 16px, $lh: 1.18);
+  font-style: normal;
+  color: $second-studio-color;
+  margin-bottom: 10px;
+}
+
+.project-list__heading {
+  @include font($fw: bold, $fz: 18px, $lh: 2, $ls: 0.06em);
+  color: $second-studio-color;
+  margin-bottom: 4px;
+}

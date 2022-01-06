@@ -1,0 +1,21 @@
+.our-worcks-list {
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    margin-right: 30px;
+    position: relative;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+  &__bg {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background-color: $worcks-bg-color;
+    left: 0;
+    bottom: 0;
+  }
+}

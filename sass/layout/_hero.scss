@@ -1,0 +1,13 @@
+.hero {
+  display: flex;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: $third-background-color;
+  padding-bottom: 200px;
+  padding-top: 200px;
+  background-image: linear-gradient(to right, $hero-gradient-color, $hero-gradient-color),
+    url(../images/hero-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

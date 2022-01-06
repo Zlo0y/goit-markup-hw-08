@@ -1,0 +1,65 @@
+.btn {
+  font-family: $main-font;
+  font-style: normal;
+  font-size: 16px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  &--main {
+    @include font($fw: bold, $fz: 16px, $lh: 1.87, $ls: 0.06em);
+    background-color: $studio-color;
+    box-shadow: 0px 4px 4px $shadow-color;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $primary-color;
+    margin: 0 auto;
+    padding: 10px 32px;
+    min-width: 200;
+    height: 50;
+    transition: background-color $animation-cubic;
+    &:hover,
+    &:focus {
+      background-color: $main-btn-color;
+    }
+  }
+  &--mailing {
+    @include font($fw: bold, $fz: 16px, $lh: 1.87, $ls: 0.06em);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $studio-color;
+    box-shadow: 0px 4px 4px $shadow-color;
+    text-align: left;
+    color: $primary-color;
+    padding: 10px 29px;
+    width: 200px;
+    height: 50px;
+  }
+  &--filter {
+    @include font($fw: 500, $fz: 16px, $lh: 1.62);
+    background-color: $second-background-color;
+    text-align: center;
+    color: $second-studio-color;
+    padding: 6px 22px;
+    height: 38px;
+    min-width: 73px;
+    box-shadow: none;
+    transition: color $animation-cubic, background-color $animation-cubic,
+      box-shadow $animation-cubic;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $primary-color;
+      background-color: $studio-color;
+      box-shadow: 0px 3px 1px $box-shadow-fourth, 0px 1px 2px $box-shadow-fifth,
+        0px 2px 2px $box-shadow-third;
+    }
+    &.current {
+      color: $primary-color;
+      background: $studio-color;
+      box-shadow: 0px 3px 1px $box-shadow-fourth, 0px 1px 2px $box-shadow-fifth,
+        0px 2px 2px $box-shadow-third;
+    }
+  }
+}

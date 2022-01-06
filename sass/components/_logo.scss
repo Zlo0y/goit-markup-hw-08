@@ -1,0 +1,20 @@
+.logo {
+  font-family: Raleway, sans-serif;
+  @include font($fw: bold, $fz: 26px, $lh: 1.19);
+  color: $studio-color;
+  &--black {
+    color: $second-logo-color;
+  }
+  &--white {
+    color: $primary-color;
+  }
+  &__header {
+    margin-right: 93px;
+    padding-bottom: 24px;
+    padding-top: 24px;
+  }
+  &__footer {
+    display: flex;
+    margin-bottom: 20px;
+  }
+}

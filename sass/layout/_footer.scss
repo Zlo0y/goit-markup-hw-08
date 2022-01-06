@@ -1,0 +1,76 @@
+.footer {
+  background-color: $third-background-color;
+  padding: 60px 0 60px 0;
+}
+
+.footer-list {
+  &__adress {
+    @include font($lh: 1.7);
+    font-style: normal;
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
+  &__link {
+    font-style: normal;
+    @include font($lh: 1.7);
+    color: $footer-contacts-color;
+    transition: color $animation-cubic;
+    &:hover,
+    &:focus {
+      color: $studio-color;
+    }
+  }
+  &__contacts {
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.adress-container {
+  margin-right: 70px;
+}
+
+.footer-social-container__text {
+  @include font($fw: bold);
+  display: flex;
+  font-style: normal;
+  text-transform: uppercase;
+  color: $primary-color;
+  margin-bottom: 20px;
+}
+
+.mailing-container {
+  width: 570px;
+  height: 86px;
+  margin: 0 0 0 auto;
+  &__text {
+    @include font($fw: bold);
+    font-style: normal;
+    text-transform: uppercase;
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+}
+
+.mailing-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__input {
+    @include font($fz: 16px, $lh: 1.25);
+    color: $primary-color;
+    width: 358px;
+    height: 50px;
+    border-radius: 4px;
+    border: 1px solid $mailing-border-color;
+    padding: 15px 16px;
+    background-color: $third-background-color;
+    margin-right: 12px;
+    &::placeholder {
+      @include font($fz: 16px, $lh: 1.25);
+      color: $footer-contacts-color;
+    }
+  }
+}

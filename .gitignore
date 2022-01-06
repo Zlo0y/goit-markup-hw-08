@@ -102,3 +102,13 @@ dist
 
 # TernJS port file
 .tern-port
+
+prettierrc.json
+
+modern-normalize.css
+
+.vscode
+settings.json
+
+styles.css
+modern-normalize.css

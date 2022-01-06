@@ -1,0 +1,75 @@
+.header {
+  border: 1px solid $border-color;
+  height: 80px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  &__link {
+    @include font($fw: 500, $ls: 0.02em);
+    color: $second-studio-color;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    display: flex;
+    transition: color $animation-cubic;
+    &:hover,
+    &:focus {
+      color: $studio-color;
+    }
+    &--current {
+      color: $studio-color;
+      position: relative;
+    }
+    &--current::after {
+      content: '';
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $studio-color;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  &__item {
+    margin-right: 50px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+  justify-content: center;
+  &__item {
+    margin-left: 50px;
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+  &__link {
+    @include font($fw: 500, $ls: 0.02em);
+    color: $third-studio-color;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color $animation-cubic;
+    &:hover,
+    &:focus {
+      color: $studio-color;
+    }
+  }
+  &__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+}
