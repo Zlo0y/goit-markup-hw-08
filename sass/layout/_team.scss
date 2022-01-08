@@ -2,40 +2,77 @@
   background-color: $second-background-color;
 }
 
-.team__main-heading,
-.clients__main-heading {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: $second-studio-color;
-  margin-bottom: 50px;
-}
+// .team-list {
+//   display: flex;
+//   text-align: center;
+//   &__container {
+//     padding: 30px 32px;
+//   }
+//   &__position {
+//     @include font($fz: 16px, $lh: 1.18);
+//     margin-bottom: 16px;
+//   }
+//   &__item {
+//     background-color: $primary-color;
+//     margin-right: 30px;
+//     box-shadow: 0px 1px 3px $box-shadow-third, 0px 1px 1px $box-shadow-first,
+//       0px 2px 1px $box-shadow-second;
+//     border-radius: 0px 0px 4px 4px;
+//     &:last-child {
+//       margin-right: 0px;
+//     }
+//   }
+// }
 
 .team-list {
-  display: flex;
   text-align: center;
-  &__container {
-    padding: 30px 32px;
+  margin-bottom: -30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
   }
-  &__position {
-    @include font($fz: 16px, $lh: 1.18);
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 1.18;
-    letter-spacing: 0.03em;
-    margin-bottom: 16px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+  &__img {
+    width: 450px;
+    height: 460px;
+    @media screen and (min-width: 768px) {
+      width: 354px;
+      height: 374px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+      height: 260px;
+    }
   }
   &__item {
+    margin-bottom: 30px;
     background-color: $primary-color;
-    margin-right: 30px;
     box-shadow: 0px 1px 3px $box-shadow-third, 0px 1px 1px $box-shadow-first,
       0px 2px 1px $box-shadow-second;
     border-radius: 0px 0px 4px 4px;
-    &:last-child {
-      margin-right: 0px;
+    @media screen and (min-width: 768px) {
+      width: calc(100% / 2 - 30px);
+      margin-right: 30px;
     }
+    @media screen and (min-width: 1200px) {
+      width: calc(100% / 4 - 30px);
+      margin-bottom: 0;
+    }
+  }
+  &__container {
+    padding: 30px 0 24px 0;
+    @media screen and (min-width: 768px) {
+      padding: 30px 74px 24px 74px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 30px 32px;
+    }
+  }
+  &__position {
+    @include font($fz: 16px, $lh: 19px);
+    margin-bottom: 16px;
   }
 }

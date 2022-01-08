@@ -1,7 +1,18 @@
+// .section {
+//   padding-bottom: 94px;
+//   padding-top: 94px;
+//   &:nth-child(0n + 3) {
+//     padding-top: 0;
+//   }
+// }
 .section {
-  padding-bottom: 94px;
-  padding-top: 94px;
-  &:nth-child(0n + 3) {
+  padding-bottom: 60px;
+  padding-top: 60px;
+  &.section--disabled-padding-top {
     padding-top: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 94px;
+    padding-top: 94px;
   }
 }

@@ -1,12 +1,24 @@
+// .hero__heading {
+//   @include font($fw: 900, $fz: 44px, $lh: 1.36, $ls: 0.06em);
+//   font-style: normal;
+//   text-align: center;
+//   text-transform: uppercase;
+//   color: $primary-color;
+//   width: 696px;
+//   min-height: 120px;
+//   margin: 0px auto 30px auto;
+// }
+
 .hero__heading {
-  @include font($fw: 900, $fz: 44px, $lh: 1.36, $ls: 0.06em);
+  @include font($fw: 900, $fz: 26px, $lh: 42px, $ls: 0.06em);
   font-style: normal;
   text-align: center;
   text-transform: uppercase;
   color: $primary-color;
-  width: 696px;
-  min-height: 120px;
-  margin: 0px auto 30px auto;
+  margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    @include font($fw: 900, $fz: 44px, $lh: 1.36, $ls: 0.06em);
+  }
 }
 
 .features-list__heading {
@@ -16,6 +28,9 @@
   color: $second-studio-color;
   margin-bottom: 10px;
   height: 16px;
+  @media screen and(max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .our-worcks-list__heading {
@@ -30,15 +45,24 @@
 .team__main-heading,
 .clients__main-heading,
 .our-worcks__main-heading {
-  @include font($fw: bold, $fz: 36px, $lh: 1.16);
+  @include font($fw: bold, $fz: 28px, $lh: 33px);
   font-style: normal;
   text-align: center;
   color: $second-studio-color;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  // @include font($fw: bold, $fz: 36px, $lh: 1.16);
+  // font-style: normal;
+  // text-align: center;
+  // color: $second-studio-color;
+  // margin-bottom: 50px;
+  @media screen and (min-width: 1200px) {
+    @include font($fw: bold, $fz: 36px, $lh: 1.16);
+    margin-bottom: 50px;
+  }
 }
 
 .team-list__heading {
-  @include font($fw: 500, $fz: 16px, $lh: 1.18);
+  @include font($fw: 500, $fz: 16px, $lh: 19px);
   font-style: normal;
   color: $second-studio-color;
   margin-bottom: 10px;

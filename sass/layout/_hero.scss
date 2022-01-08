@@ -1,13 +1,23 @@
 .hero {
-  display: flex;
-  max-width: 1600px;
   margin: 0 auto;
   background-color: $third-background-color;
-  padding-bottom: 200px;
-  padding-top: 200px;
   background-image: linear-gradient(to right, $hero-gradient-color, $hero-gradient-color),
     url(../images/hero-img.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding: 118px 0;
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+    height: 400px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    height: 400px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    height: 600px;
+    padding: 200px 0;
+  }
 }

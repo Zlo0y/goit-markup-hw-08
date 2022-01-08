@@ -1,18 +1,26 @@
 .footer {
   background-color: $third-background-color;
-  padding: 60px 0 60px 0;
+  padding: 60px 0;
 }
 
 .footer-list {
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
   &__adress {
-    @include font($lh: 1.7);
+    @include font($lh: 171%);
     font-style: normal;
     color: $primary-color;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
   }
   &__link {
     font-style: normal;
-    @include font($lh: 1.7);
+    @include font($lh: 24px);
     color: $footer-contacts-color;
     transition: color $animation-cubic;
     &:hover,
@@ -22,6 +30,9 @@
   }
   &__contacts {
     margin-bottom: 8px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -29,12 +40,27 @@
 }
 
 .adress-container {
-  margin-right: 70px;
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    margin-right: 165px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+    margin-bottom: 0;
+  }
+}
+
+.footer-social-container {
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
 }
 
 .footer-social-container__text {
-  @include font($fw: bold);
-  display: flex;
+  @include font($fw: bold, $lh: 16px);
   font-style: normal;
   text-transform: uppercase;
   color: $primary-color;
@@ -42,11 +68,16 @@
 }
 
 .mailing-container {
-  width: 570px;
-  height: 86px;
-  margin: 0 0 0 auto;
+  @media screen and (min-width: 1200px) {
+    width: 570px;
+    height: 86px;
+    margin: 0 0 0 auto;
+  }
   &__text {
-    @include font($fw: bold);
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
+    @include font($fw: bold, $lh: 16px);
     font-style: normal;
     text-transform: uppercase;
     color: $primary-color;
@@ -56,8 +87,12 @@
 
 .mailing-form {
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: center;
+  }
   &__input {
     @include font($fz: 16px, $lh: 1.25);
     color: $primary-color;
@@ -67,7 +102,12 @@
     border: 1px solid $mailing-border-color;
     padding: 15px 16px;
     background-color: $third-background-color;
-    margin-right: 12px;
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 12px;
+    }
     &::placeholder {
       @include font($fz: 16px, $lh: 1.25);
       color: $footer-contacts-color;

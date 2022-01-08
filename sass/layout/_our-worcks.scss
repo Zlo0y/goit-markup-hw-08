@@ -1,3 +1,9 @@
+.our-worcks {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
 .our-worcks-list {
   display: flex;
   justify-content: space-between;

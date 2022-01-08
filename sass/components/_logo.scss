@@ -1,7 +1,10 @@
 .logo {
   font-family: Raleway, sans-serif;
-  @include font($fw: bold, $fz: 26px, $lh: 1.19);
   color: $studio-color;
+  @include font($fw: bold, $fz: 24px, $lh: 28px);
+  @media screen and (min-width: 1200px) {
+    @include font($fw: bold, $fz: 26px, $lh: 1.19);
+  }
   &--black {
     color: $second-logo-color;
   }
@@ -9,12 +12,25 @@
     color: $primary-color;
   }
   &__header {
-    margin-right: 93px;
-    padding-bottom: 24px;
-    padding-top: 24px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    @media screen and (min-width: 768px) {
+      margin-right: 88px;
+      padding-bottom: 26px;
+      padding-top: 26px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+      padding-bottom: 25px;
+      padding-top: 24px;
+    }
   }
   &__footer {
-    display: flex;
+    display: block;
     margin-bottom: 20px;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
   }
 }
