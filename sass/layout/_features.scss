@@ -1,27 +1,3 @@
-// .features-list {
-//   display: flex;
-//   &__text {
-//     @include font($lh: 1.71);
-//     height: 75px;
-//   }
-//   &__item {
-//     margin-right: 30px;
-//     width: 270px;
-//     &:last-child {
-//       margin-right: 0;
-//     }
-//   }
-//   &__icon-container {
-//     display: flex;
-//     width: 270px;
-//     height: 120px;
-//     background-color: $second-background-color;
-//     margin-bottom: 30px;
-//     align-items: center;
-//     justify-content: center;
-//   }
-// }
-
 .features-list {
   margin-bottom: -30px;
   @media screen and (min-width: 768px) {

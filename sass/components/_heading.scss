@@ -50,11 +50,6 @@
   text-align: center;
   color: $second-studio-color;
   margin-bottom: 30px;
-  // @include font($fw: bold, $fz: 36px, $lh: 1.16);
-  // font-style: normal;
-  // text-align: center;
-  // color: $second-studio-color;
-  // margin-bottom: 50px;
   @media screen and (min-width: 1200px) {
     @include font($fw: bold, $fz: 36px, $lh: 1.16);
     margin-bottom: 50px;
@@ -69,7 +64,11 @@
 }
 
 .project-list__heading {
-  @include font($fw: bold, $fz: 18px, $lh: 2, $ls: 0.06em);
+  &--large {
+    max-width: 304px;
+    height: 72px;
+  }
+  @include font($fw: bold, $fz: 18px, $lh: 36px, $ls: 0.06em);
   color: $second-studio-color;
   margin-bottom: 4px;
 }

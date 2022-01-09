@@ -2,7 +2,27 @@
   margin: 0 auto;
   background-color: $third-background-color;
   background-image: linear-gradient(to right, $hero-gradient-color, $hero-gradient-color),
-    url(../images/hero-img.jpg);
+    url(../images/mob/hero-img.jpg);
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, $hero-gradient-color, $hero-gradient-color),
+      url('../images/mob/hero-img-x2.jpg');
+  }
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(to right, $hero-gradient-color, $hero-gradient-color),
+      url(../images/tab/hero-img.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, $hero-gradient-color, $hero-gradient-color),
+        url('../images/tab/hero-img-x2.jpg');
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(to right, $hero-gradient-color, $hero-gradient-color),
+      url(../images/pc/hero-img.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, $hero-gradient-color, $hero-gradient-color),
+        url('../images/pc/hero-img-x2.jpg');
+    }
+  }
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

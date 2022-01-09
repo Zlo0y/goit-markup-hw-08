@@ -1,6 +1,9 @@
 .header {
-  border: 1px solid $border-color;
-  height: 80px;
+  border-bottom: 1px solid $border-color;
+  height: 60px;
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  }
 }
 
 .navigation {
@@ -9,10 +12,13 @@
 }
 
 .nav-list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   display: flex;
   justify-content: center;
   &__link {
-    @include font($fw: 500, $ls: 0.02em);
+    @include font($fw: 500, $lh: 16px, $ls: 0.02em);
     color: $second-studio-color;
     padding-bottom: 32px;
     padding-top: 32px;
@@ -46,23 +52,42 @@
 }
 
 .contacts {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   display: flex;
-  justify-content: center;
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+  }
   &__item {
-    margin-left: 50px;
-    &:first-child {
-      margin-left: 0px;
+    @media screen and (min-width: 768px) {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: 50px;
+      &:first-child {
+        margin-left: 0px;
+      }
     }
   }
   &__link {
-    @include font($fw: 500, $ls: 0.02em);
+    @include font($fw: 500, $fz: 12px, $lh: 14px, $ls: 0.02em);
     color: $third-studio-color;
-    padding-bottom: 32px;
-    padding-top: 32px;
     display: flex;
-    justify-content: center;
+
     align-items: center;
     transition: color $animation-cubic;
+    @media screen and (min-width: 1200px) {
+      justify-content: center;
+      @include font($fw: 500, $ls: 0.02em);
+      padding-bottom: 32px;
+      padding-top: 32px;
+    }
     &:hover,
     &:focus {
       color: $studio-color;

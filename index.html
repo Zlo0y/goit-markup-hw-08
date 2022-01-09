@@ -12,7 +12,7 @@
     <title>Студия</title>
 </head>
 <body class="site-body">
-    <!-- <header class="header">
+        <header class="header">
         <div class="container container--header">
             <nav class="navigation">
                 <a href="./index.html" class="logo logo__header link">Web<span class="logo--black">Studio</span></a>
@@ -27,6 +27,11 @@
                         <a class="nav-list__link link" href="">Контакты</a>
                     </li>
                 </ul>
+                <button type="button" class="mob-menu-btn btn mob-btn">
+                    <svg class="mob-menu-icon" width="40" height="40">
+                        <use href="./images/icons.svg#icon-mob-menu"></use>
+                    </svg>
+                </button>
             </nav>
             <ul class="contacts list">
                 <li class="contacts__item">
@@ -44,7 +49,53 @@
                 </li>
             </ul>
         </div>
-    </header> -->
+            <div class="mob-menu is-hidden">
+                <div class="mob-menu-top">
+                    <button type="button" class="mob-menu__close-btn btn mob-btn">
+                    <svg class="mob-menu__close-icon" width="40" height="40">
+                        <use href="./images/icons.svg#icon-mob-menu-close"></use>
+                    </svg>
+                </button>
+                <nav class="mob-menu__navigation">
+                    <ul class="mob-menu-list list">
+                        <li class="mob-menu-list__item mob-menu-list__item--current">
+                            <a class="mob-menu-list__link link" href="./index.html">Студия</a>
+                        </li>
+                        <li class="mob-menu-list__item">
+                            <a class="mob-menu-list__link link" href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="mob-menu-list__item">
+                            <a class="mob-menu-list__link link" href="">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                </div>
+                <div class="mob-menu-bottom">
+                <ul class="mob-menu-contacts list">
+                    <li class="mob-menu-contacts__item">
+                        <a class="mob-menu-contacts__link link" href="tel:+380961111111">+38 096 111 11 11</a>
+                    </li>
+                    <li class="mob-menu-contacts__item">
+                        <a class="mob-menu-contacts__link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="mob-social-list list">
+                    <li class="mob-social-list__item">
+                        <a href="" class="mob-social-list__link link">Instagram</a>
+                    </li>
+                    <li class="mob-social-list__item">
+                        <a href="" class="mob-social-list__link link">Twitter</a>
+                    </li>
+                    <li class="mob-social-list__item">
+                        <a href="" class="mob-social-list__link link">Facebook</a>
+                    </li>
+                    <li class="mob-social-list__item">
+                        <a href="" class="mob-social-list__link link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
     <main>
         <section class="hero">
             <div class="container">
@@ -100,19 +151,25 @@
                 <h2 class="our-worcks__main-heading">Чем мы занимаемся</h2>
                 <ul class="our-worcks-list list">
                     <li class="our-worcks-list__item">
-                        <img src="./images/box1_img.jpg" alt="человек набирает текст на клавиатуре сидя перед планшетом" width="370">
+                        <img 
+                        srcset="./images/pc/box1_img.jpg 1x, ./images/pc/box1_img-x2.jpg 2x"
+                        src="./images/pc/box1_img.jpg" alt="человек набирает текст на клавиатуре сидя перед планшетом" width="370">
                         <div class="our-worcks-list__bg">
                             <h3 class="our-worcks-list__heading">Десктопные приложения</h3>
                         </div>
                     </li>
                     <li class="our-worcks-list__item">
-                        <img src="./images/box2_img.jpg" alt="человек сидит перед ноутбуком и смотрит в телефон" width="370">
+                        <img 
+                        srcset="./images/pc/box2_img.jpg 1x, ./images/pc/box2_img-x2.jpg 2x"
+                        src="./images/pc/box2_img.jpg" alt="человек сидит перед ноутбуком и смотрит в телефон" width="370">
                         <div class="our-worcks-list__bg">
                             <h3 class="our-worcks-list__heading">Мобильные приложения</h3>
                         </div>
                     </li>
                     <li class="our-worcks-list__item">
-                        <img src="./images/box3_img.jpg" alt="человек выбирает стилусом грандиент цветов на планшете" width="370">
+                        <img 
+                        srcset="./images/pc/box3_img.jpg 1x, ./images/pc/box3_img-x2.jpg 2x"
+                        src="./images/pc/box3_img.jpg" alt="человек выбирает стилусом грандиент цветов на планшете" width="370">
                         <div class="our-worcks-list__bg">
                             <h3 class="our-worcks-list__heading">Дизайнерские решения</h3>
                         </div>
@@ -125,7 +182,12 @@
                 <h2 class="team__main-heading">Наша команда</h2>
                 <ul class="team-list list">
                     <li class="team-list__item">
-                        <img class="team-list__img" src="./images/demyanenko.jpg" alt="фото сотрудника Игоря Демьяненка" width="270">
+                        <picture>
+                            <source srcset="./images/pc/demyanenko.jpg 1x, ./images/pc/demyanenko-x2.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/tab/demyanenko.jpg 1x, ./images/tab/demyanenko-x2.jpg 2x" media="(min-width: 768px)">
+                            <source srcset="./images/mob/demyanenko.jpg 1x, ./images/mob/demyanenko-x2.jpg 2x" media="(max-width: 767px)">
+                            <img src="./images/pc/demyanenko.jpg" alt="фото сотрудника Игоря Демьяненка">
+                        </picture>
                         <div class="team-list__container">
                             <h3 class="team-list__heading">Игорь Демьяненко</h3>
                             <p lang="en" class="team-list__position">Product Designer</p>
@@ -162,7 +224,12 @@
                         </div>
                     </li>
                     <li class="team-list__item">
-                        <img class="team-list__img" src="./images/repina.jpg" alt="фото сотрудницы Ольги Репины" width="270">
+                        <picture>
+                            <source srcset="./images/pc/repina.jpg 1x, ./images/pc/repina-x2.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/tab/repina.jpg 1x, ./images/tab/repina-x2.jpg 2x" media="(min-width: 768px)">
+                            <source srcset="./images/mob/repina.jpg 1x, ./images/mob/repina-x2.jpg 2x" media="(max-width: 767px)">
+                            <img src="./images/pc/repina.jpg" alt="фото сотрудницы Ольги Репины">
+                        </picture>
                         <div class="team-list__container">
                             <h3 class="team-list__heading">Ольга Репина</h3>
                             <p lang="en" class="team-list__position">Frontend Developer</p>
@@ -199,7 +266,12 @@
                         </div>
                     </li>
                     <li class="team-list__item">
-                        <img class="team-list__img" src="./images/tarasov.jpg" alt="фото сотрудника Николая Тарасова" width="270">
+                        <picture>
+                            <source srcset="./images/pc/tarasov.jpg 1x, ./images/pc/tarasov-x2.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/tab/tarasov.jpg 1x, ./images/tab/tarasov-x2.jpg 2x" media="(min-width: 768px)">
+                            <source srcset="./images/mob/tarasov.jpg 1x, ./images/mob/tarasov-x2.jpg 2x" media="(max-width: 767px)">
+                            <img src="./images/pc/tarasov.jpg" alt="фото сотрудника Николая Тарасова">
+                        </picture>
                         <div class="team-list__container">
                             <h3 class="team-list__heading">Николай Тарасов</h3>
                             <p lang="en" class="team-list__position">Marketing</p>
@@ -236,7 +308,12 @@
                         </div>
                     </li>
                     <li class="team-list__item">
-                        <img class="team-list__img" src="./images/yermakov.jpg" alt="фото сотрудника Михаила Ермакова" width="270">
+                        <picture>
+                            <source srcset="./images/pc/yermakov.jpg 1x, ./images/pc/yermakov-x2.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/tab/yermakov.jpg 1x, ./images/tab/yermakov-x2.jpg 2x" media="(min-width: 768px)">
+                            <source srcset="./images/mob/yermakov.jpg 1x, ./images/mob/yermakov-x2.jpg 2x" media="(max-width: 767px)">
+                            <img src="./images/pc/yermakov.jpg" alt="фото сотрудника Михаила Ермакова">
+                        </picture>
                         <div class="team-list__container">
                             <h3 class="team-list__heading">Михаил Ермаков</h3>
                             <p lang="en" class="team-list__position">UI Designer</p>
@@ -393,7 +470,7 @@
                 </div>
             </div>
     </footer>
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="modal__close-btn" data-modal-close>
                 <svg class="modal__close-icon" width="18" height="18">
@@ -433,6 +510,7 @@
             </form>
         </div>
     </div> -->
-    <!-- <script src="./js/modal.js"></script> -->
-</body>
+     <script src="./js/modal.js"></script> 
+    <script src="./js/mobile-menu.js"></script>
+    </body>
 </html>
