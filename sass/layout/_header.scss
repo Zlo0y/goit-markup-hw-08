@@ -84,7 +84,7 @@
     transition: color $animation-cubic;
     @media screen and (min-width: 1200px) {
       justify-content: center;
-      @include font($fw: 500, $ls: 0.02em);
+      @include font($fw: 500, $lh: 16px, $ls: 0.02em);
       padding-bottom: 32px;
       padding-top: 32px;
     }

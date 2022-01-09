@@ -325,8 +325,8 @@ ul {
 }
 @media screen and (min-width: 768px) {
   .container--header {
+    height: 80px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
   }
 }
@@ -363,7 +363,7 @@ ul {
 }
 @media screen and (min-width: 1200px) {
   .logo {
-    line-height: 1.19;
+    line-height: 31px;
     letter-spacing: 0.03em;
     font-size: 26px;
     font-weight: bold;
@@ -389,7 +389,7 @@ ul {
 @media screen and (min-width: 1200px) {
   .logo__header {
     margin-right: 93px;
-    padding-bottom: 25px;
+    padding-bottom: 24px;
     padding-top: 24px;
   }
 }
@@ -1073,7 +1073,7 @@ ul {
 @media screen and (min-width: 1200px) {
   .contacts__link {
     justify-content: center;
-    line-height: 1.14;
+    line-height: 16px;
     letter-spacing: 0.02em;
     font-size: 14px;
     font-weight: 500;
