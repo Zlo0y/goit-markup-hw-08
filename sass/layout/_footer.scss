@@ -10,7 +10,7 @@
     flex-direction: column;
   }
   &__adress {
-    @include font($lh: 171%);
+    @include font($lh: 1.71);
     font-style: normal;
     color: $primary-color;
     margin-bottom: 8px;
@@ -20,7 +20,7 @@
   }
   &__link {
     font-style: normal;
-    @include font($lh: 24px);
+    @include font($lh: 1.71);
     color: $footer-contacts-color;
     transition: color $animation-cubic;
     &:hover,
@@ -41,9 +41,6 @@
 
 .adress-container {
   margin-bottom: 60px;
-  @media screen and (min-width: 768px) {
-    margin-right: 165px;
-  }
   @media screen and (min-width: 1200px) {
     margin-right: 70px;
     margin-bottom: 0;
@@ -57,6 +54,9 @@
     align-items: center;
     margin-bottom: 60px;
   }
+  @media screen and(min-width: 1200px) {
+    margin-right: auto;
+  }
 }
 
 .footer-social-container__text {
@@ -68,10 +68,11 @@
 }
 
 .mailing-container {
+  padding-top: 60px;
   @media screen and (min-width: 1200px) {
+    padding-top: 0;
     width: 570px;
     height: 86px;
-    margin: 0 0 0 auto;
   }
   &__text {
     @media screen and (max-width: 1199px) {

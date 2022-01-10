@@ -1,23 +1,16 @@
-// .hero__heading {
-//   @include font($fw: 900, $fz: 44px, $lh: 1.36, $ls: 0.06em);
-//   font-style: normal;
-//   text-align: center;
-//   text-transform: uppercase;
-//   color: $primary-color;
-//   width: 696px;
-//   min-height: 120px;
-//   margin: 0px auto 30px auto;
-// }
-
 .hero__heading {
   @include font($fw: 900, $fz: 26px, $lh: 42px, $ls: 0.06em);
   font-style: normal;
   text-align: center;
   text-transform: uppercase;
   color: $primary-color;
-  margin-bottom: 30px;
+  margin: 0 auto 30px auto;
+  @media screen and (max-width: 1199px) {
+    max-width: 360px;
+  }
   @media screen and (min-width: 1200px) {
     @include font($fw: 900, $fz: 44px, $lh: 1.36, $ls: 0.06em);
+    width: 696px;
   }
 }
 
@@ -64,12 +57,12 @@
 }
 
 .project-list__heading {
-  &--large {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      max-width: 304px;
-      height: 72px;
-    }
-  }
+  // &--large {
+  //   @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //     max-width: 304px;
+  //     height: 72px;
+  //   }
+  // }
   @include font($fw: bold, $fz: 18px, $lh: 36px, $ls: 0.06em);
   color: $second-studio-color;
   margin-bottom: 4px;

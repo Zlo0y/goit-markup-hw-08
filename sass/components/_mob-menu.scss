@@ -39,6 +39,9 @@
 }
 
 .mob-menu {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -49,6 +52,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: opacity $animation-cubic, visibility $animation-cubic;
   &.is-hidden {
     visibility: hidden;
     opacity: 0;
@@ -75,6 +79,9 @@
     @include font($fw: 500, $fz: 24px, $lh: 28px, $ls: 0.02em);
     color: $third-studio-color;
     &:not(:last-child) {
+      @media screen and (max-width: 479px) {
+        @include font($fw: 500, $fz: 24px, $lh: 28px, $ls: 0.02em);
+      }
       margin-bottom: 32px;
       @include font($fw: 500, $fz: 34px, $lh: 40px, $ls: 0.02em);
       color: $studio-color;
@@ -84,6 +91,13 @@
 
 .mob-social-list {
   display: flex;
+  @media screen and (max-width: 446px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    &__item:not(:nth-child(n + 3)) {
+      margin-bottom: 10px;
+    }
+  }
   @include font($fw: 500, $fz: 18px, $lh: 22px, $ls: 0.02em);
   color: $studio-color;
   &__item:not(:last-child) {

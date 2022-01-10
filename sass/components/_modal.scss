@@ -18,8 +18,11 @@
 }
 
 .modal {
-  width: 450px;
-  min-height: 609px;
+  width: calc(100% - 30px);
+  @media screen and (min-width: 4800px) {
+    width: 450px;
+    min-height: 609px;
+  }
   @media screen and (min-width: 1200px) {
     width: 528px;
     min-height: 581px;
@@ -60,7 +63,12 @@
   }
   &__title {
     height: 60px;
-    @include font($fw: bold, $fz: 20px, $lh: 30px);
+    @media screen and (max-width: 342px) {
+      @include font($fw: bold, $fz: 16px, $lh: 22px);
+    }
+    @media screen and (min-width: 343px) {
+      @include font($fw: bold, $fz: 20px, $lh: 30px);
+    }
     @media screen and (min-width: 1200px) {
       height: 23px;
       @include font($fw: bold, $fz: 20px, $lh: 23px);
@@ -157,18 +165,20 @@
     &::before {
       content: '';
       display: flex;
-      width: 16px;
-      height: 15px;
+      min-width: 16px;
+      min-height: 15px;
       border: 2px solid $second-studio-color;
       border-radius: 2px;
       margin-right: 8px;
       transition: border-color $animation-cubic;
       cursor: pointer;
     }
-    &:hover::before,
-    &:focus::before {
+    &:hover::before {
       border: 2px solid $studio-color;
     }
+  }
+  &__check:focus + .modal-form__check-text::before {
+    border: 2px solid $studio-color;
   }
   &__check:checked + .modal-form__check-text::before {
     background-image: url(../images/icon-check.svg);
