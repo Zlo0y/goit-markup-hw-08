@@ -60,16 +60,16 @@
       box-shadow: 0px 1px 1px $box-shadow-third, 0px 4px 4px $box-shadow-sixth,
         1px 4px 6px $box-shadow-seventh;
     }
-    &:hover .project-list__cart-text,
-    &:focus .project-list__cart-text {
+    &:hover .project-list__card-text,
+    &:focus .project-list__card-text {
       transform: translateY(0);
     }
   }
-  &__cart-top {
+  &__card-top {
     position: relative;
     overflow: hidden;
   }
-  &__cart-bottom {
+  &__card-bottom {
     width: 354px;
     flex-grow: 1;
     border: 1px solid $portfolio-border-color;
@@ -82,7 +82,7 @@
     color: $third-studio-color;
   }
 
-  &__cart-text {
+  &__card-text {
     @include font($fz: 18px, $lh: 28px);
     position: absolute;
     font-family: $main-font;
