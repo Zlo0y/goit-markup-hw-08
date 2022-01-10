@@ -106,3 +106,12 @@
     margin-right: 10px;
   }
 }
+
+@media screen and(min-width: 768px) and (max-width: 1199px) {
+}
+a[href='mailto:info@devstudio.com'] {
+  padding-top: 21px;
+}
+a[href='tel:+380961111111'] {
+  padding-bottom: 21px;
+}
