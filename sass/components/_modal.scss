@@ -19,7 +19,7 @@
 
 .modal {
   width: calc(100% - 30px);
-  @media screen and (min-width: 4800px) {
+  @media screen and (min-width: 480px) {
     width: 450px;
     min-height: 609px;
   }
@@ -36,6 +36,9 @@
     0px 2px 1px $box-shadow-second;
   transform: scale(1) rotate(0) translate(-50%, -50%);
   transition: transform $animation-cubic;
+  @media screen and (max-width: 442px) {
+    padding: 20px;
+  }
   padding: 40px;
   &__close-btn {
     position: absolute;
@@ -63,6 +66,9 @@
   }
   &__title {
     height: 60px;
+    @media screen and (max-width: 442px) {
+      margin-top: 18px;
+    }
     @media screen and (max-width: 342px) {
       @include font($fw: bold, $fz: 16px, $lh: 22px);
     }

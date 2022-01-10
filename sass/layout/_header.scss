@@ -76,14 +76,14 @@
     }
   }
   &__link {
-    @media screen and (max-width: 1199px) {
-      &--ptop {
-        padding-top: 21px;
-      }
-      &--pbottom {
-        padding-bottom: 21px;
-      }
-    }
+    // @media screen and (max-width: 1199px) {
+    //   &--ptop {
+    //     padding-top: 21px;
+    //   }
+    //   &--pbottom {
+    //     padding-bottom: 21px;
+    //   }
+    // }
     @include font($fw: 500, $fz: 12px, $lh: 14px, $ls: 0.02em);
     color: $third-studio-color;
     display: flex;
