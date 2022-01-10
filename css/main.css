@@ -1603,7 +1603,6 @@ ul {
   display: flex;
   flex-direction: column;
   height: 100%;
-  display: block;
   box-shadow: none;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1618,6 +1617,7 @@ ul {
   overflow: hidden;
 }
 .project-list__cart-bottom {
+  width: 354px;
   flex-grow: 1;
   border: 1px solid #eeeeee;
   border-top: 0;
