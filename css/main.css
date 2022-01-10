@@ -1109,7 +1109,7 @@ ul {
     margin-left: 0px;
   }
 }
-.contacts__link {
+.contacts__link.link {
   line-height: 14px;
   letter-spacing: 0.02em;
   font-size: 12px;
@@ -1120,7 +1120,7 @@ ul {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 1200px) {
-  .contacts__link {
+  .contacts__link.link {
     justify-content: center;
     line-height: 16px;
     letter-spacing: 0.02em;
@@ -1130,7 +1130,7 @@ ul {
     padding-top: 32px;
   }
 }
-.contacts__link:hover, .contacts__link:focus {
+.contacts__link.link:hover, .contacts__link.link:focus {
   color: #2196f3;
 }
 .contacts__icon {
